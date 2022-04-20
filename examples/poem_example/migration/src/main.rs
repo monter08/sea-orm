@@ -1,7 +1,6 @@
-use migration::Migrator;
-use sea_schema::migration::*;
+use entity::sea_orm::migration::prelude::*;
 
 #[async_std::main]
 async fn main() {
-    cli::run_cli(Migrator).await;
+    cli::run_cli(migration::Migrator).await;
 }

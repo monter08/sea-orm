@@ -1,4 +1,3 @@
-
 use clap::ArgMatches;
 use sea_orm_codegen::{EntityTransformer, OutputFile, WithSerde};
 use std::{error::Error, fmt::Display, fs, io::Write, path::Path, process::Command, str::FromStr};
@@ -257,8 +256,8 @@ where
 #[cfg(test)]
 mod tests {
     use super::*;
-    use clap::AppSettings;
     use crate::cli;
+    use clap::AppSettings;
 
     #[test]
     #[should_panic(

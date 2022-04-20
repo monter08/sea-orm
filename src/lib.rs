@@ -263,7 +263,7 @@
 //! ## Who's using SeaORM?
 //!
 //! SeaORM is the foundation of [StarfishQL](https://github.com/SeaQL/starfish-ql), an experimental graph database and query engine.
-//! 
+//!
 //! For more projects, see [Built with SeaORM](https://github.com/SeaQL/sea-orm/blob/master/COMMUNITY.md#built-with-seaorm).
 //!
 //! ## License
@@ -297,6 +297,9 @@ pub mod error;
 mod executor;
 /// Holds types and methods to perform metric collection
 pub mod metric;
+/// Migration supports
+#[cfg(feature = "migration")]
+pub mod migration;
 /// Holds types and methods to perform queries
 pub mod query;
 /// Holds types that defines the schemas of an Entity
