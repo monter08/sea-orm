@@ -31,7 +31,7 @@ futures-util = { version = "^0.3" }
 tracing = { version = "0.1", features = ["log"] }
 rust_decimal = { version = "^1", optional = true }
 sea-orm-macros = { version = "^0.7.0", path = "sea-orm-macros", optional = true }
-sea-query = { git = 'https://github.com/monter08/sea-query', rev='722fdf13ca0dda8f5eba41f195ce1c2289c79fa1', features = ["thread-safe",
+sea-query = { git = 'https://github.com/monter08/sea-query', rev='6ff3f497ac83a504bb7aba06035568fd5b5a43d4', features = ["thread-safe",
     "sqlx-postgres",
     "with-chrono",
     "with-json",
