@@ -304,6 +304,7 @@ try_getable_all!(f32);
 try_getable_all!(f64);
 try_getable_all!(String);
 try_getable_all!(Vec<u8>);
+try_getable_all!(Vec<String>);
 
 #[cfg(feature = "with-json")]
 try_getable_all!(serde_json::Value);

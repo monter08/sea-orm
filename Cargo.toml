@@ -31,7 +31,16 @@ futures-util = { version = "^0.3" }
 tracing = { version = "0.1", features = ["log"] }
 rust_decimal = { version = "^1", optional = true }
 sea-orm-macros = { version = "^0.7.0", path = "sea-orm-macros", optional = true }
-sea-query = { version = "^0.24.2", features = ["thread-safe"] }
+sea-query = { git = 'https://github.com/monter08/sea-query', rev='722fdf13ca0dda8f5eba41f195ce1c2289c79fa1', features = ["thread-safe",
+    "sqlx-postgres",
+    "with-chrono",
+    "with-json",
+    "with-time",
+    "with-rust_decimal",
+    "with-uuid",
+    "with-bigdecimal",
+    "postgres-array",
+] }
 sea-strum = { version = "^0.23", features = ["derive", "sea-orm"] }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = { version = "^1", optional = true }
@@ -95,3 +104,7 @@ runtime-actix-rustls = ["sqlx/runtime-actix-rustls", "runtime-actix"]
 runtime-tokio = []
 runtime-tokio-native-tls = ["sqlx/runtime-tokio-native-tls", "runtime-tokio"]
 runtime-tokio-rustls = ["sqlx/runtime-tokio-rustls", "runtime-tokio"]
+
+[replace]
+#git = 'https://github.com/monter08/sea-query'
+#"sea-query:0.24.2" = { path = '../sea-query'}
